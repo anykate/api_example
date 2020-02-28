@@ -11,7 +11,7 @@ class Language(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('language-detail', args=[str(self.id)])
+        return reverse('languages:language-detail', args=[str(self.id)])
 
 
 class State(models.Model):
@@ -26,4 +26,4 @@ class State(models.Model):
         return self.name
 
     def get_absolute_url(self):
-        return reverse('state-detail', args=[str(self.id)])
+        return reverse('languages:state-detail', args=[str(self.id)])
